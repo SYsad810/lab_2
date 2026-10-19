@@ -7,9 +7,11 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    // min-h-screen + flex-col притискають футер донизу; темний фон для всієї сторінки
+    <div className="flex min-h-screen flex-col bg-slate-950 font-display text-slate-200 antialiased">
       <Header />
-      <main>
+      {/* Grid: одна колонка на телефоні, дві — від md (768px) */}
+      <main className="mx-auto -mt-12 grid w-full max-w-5xl flex-1 content-start gap-6 px-4 pb-12 md:grid-cols-2">
         <About />
         <Education />
         <Skills />
