@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме | Фірко Андрій</title>
+
+    <!-- Спосіб 3: зовнішній CSS (основна частина правил) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Спосіб 2: внутрішній CSS (стилі, потрібні лише цій сторінці) -->
+    <style>
+        .status-badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background-color: #22c55e;
+            color: #052e16;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Фірко Андрій</h1>
-        <p>Студент спеціальності «Кібербезпека та захист інформації» | Junior Security / Web Specialist</p>
-        <p>Email: <a href="mailto:firko.andriy60@gmail.com">firko.andriy60@gmail.com</a></p>
+    <header id="top" class="site-header">
+        <div class="container header-inner">
+            <div class="header-info">
+                <h1>Фірко Андрій</h1>
+                <p class="subtitle">Студент спеціальності «Кібербезпека та захист інформації» | Junior Security / Web Specialist</p>
+                <p class="contact">Email: <a href="mailto:firko.andriy60@gmail.com">firko.andriy60@gmail.com</a></p>
+                <span class="status-badge">Відкритий до стажування</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Навігація по резюме">
+                <a href="#about">Про мене</a>
+                <a href="#education">Освіта</a>
+                <a href="#skills">Навички</a>
+                <a href="#projects">Проєкти</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main class="container resume-grid">
+        <section id="about" class="card card--wide">
             <h2>Про мене</h2>
             <p>Студент 2-го курсу НУ «Львівська політехніка». Захоплююся практичною кібербезпекою, мережевою безпекою та веб-технологіями. Маю досвід аналізу шкідливого ПЗ, налаштування мережевих топологій і тестування веб-застосунків на вразливості.</p>
         </section>
 
-        <section>
+        <section id="education" class="card">
             <h2>Освіта та стажування</h2>
-            <ul>
+            <ul class="timeline">
                 <li>
                     <strong>Національний університет «Львівська політехніка»</strong> (2025 — дотепер)<br>
                     Інститут комп'ютерних технологій, автоматики та метрології (ІКТА)<br>
@@ -38,9 +67,9 @@
             </ul>
         </section>
 
-        <section>
+        <section id="skills" class="card">
             <h2>Навички (Skills)</h2>
-            <ul>
+            <ul class="skill-list">
                 <li><strong>Мови та технології:</strong> Python, HTML, CSS, SQL, C#, Bash, PowerShell</li>
                 <li><strong>Операційні системи:</strong> Kali Linux, Ubuntu, Windows</li>
                 <li><strong>Мережі та безпека:</strong> Cisco Packet Tracer, GNS3, Suricata IDS, Wireshark, Burp Suite</li>
@@ -48,18 +77,20 @@
             </ul>
         </section>
 
-        <section>
+        <section id="projects" class="card card--wide">
             <h2>Проєкти та практичний досвід</h2>
-            <ul>
-                <li><strong>Мережева безпека:</strong> Налаштування маршрутизації (OSPF), WPA2-Enterprise (RADIUS) та захисту від ARP spoofing в GNS3/Packet Tracer.</li>
-                <li><strong>Аналіз загроз:</strong> Дослідження механізмів обфускації PowerShell-скриптів та поведінковий аналіз виконаних файлів у пісочниці.</li>
-                <li><strong>Розробка БД:</strong> Проєктування нормалізованої бази даних (5 таблиць BCNF) для інформаційної системи.</li>
+            <ul class="project-list">
+                <li class="project"><strong>Мережева безпека:</strong> Налаштування маршрутизації (OSPF), WPA2-Enterprise (RADIUS) та захисту від ARP spoofing в GNS3/Packet Tracer.</li>
+                <li class="project"><strong>Аналіз загроз:</strong> Дослідження механізмів обфускації PowerShell-скриптів та поведінковий аналіз виконаних файлів у пісочниці.</li>
+                <li class="project"><strong>Розробка БД:</strong> Проєктування нормалізованої бази даних (5 таблиць BCNF) для інформаційної системи.</li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Фірко Андрій. Всі права захищені.</p>
+    <footer class="site-footer">
+        <!-- Спосіб 1: вбудований (inline) CSS -->
+        <p style="letter-spacing: 0.5px; opacity: 0.85;">&copy; 2026 Фірко Андрій. Всі права захищені.</p>
+        <a href="#top" class="to-top">↑ Нагору</a>
     </footer>
 
 </body>
