@@ -1,3 +1,5 @@
+import { cardClass } from '../config';
+
 const skills = [
   { category: 'Мови та технології', items: ['Python', 'HTML', 'CSS', 'SQL', 'C#', 'Bash', 'PowerShell'] },
   { category: 'Операційні системи', items: ['Kali Linux', 'Ubuntu', 'Windows'] },
@@ -7,20 +9,20 @@ const skills = [
 
 function Skills() {
   return (
-    <section className="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-xl transition duration-300 hover:border-brand-500/60">
-      <h2 className="mb-5 flex items-center gap-2 text-2xl font-bold text-white">
-        <span className="h-6 w-1.5 rounded-full bg-brand-400"></span>
+    <section className={cardClass}>
+      <h2 className="mb-5 flex items-center gap-2 text-2xl font-bold text-slate-900 dark:text-white">
+        <span className="h-6 w-1.5 rounded-full bg-brand-500 dark:bg-brand-400"></span>
         Навички (Skills)
       </h2>
       <div className="space-y-4">
         {skills.map((group) => (
           <div key={group.category}>
-            <h3 className="mb-2 text-sm font-semibold text-slate-400">{group.category}</h3>
+            <h3 className="mb-2 text-sm font-semibold text-slate-500 dark:text-slate-400">{group.category}</h3>
             <ul className="flex flex-wrap gap-2">
               {group.items.map((skill) => (
                 <li
                   key={skill}
-                  className="cursor-default rounded-lg border border-brand-500/30 bg-brand-500/10 px-3 py-1 font-mono text-sm text-brand-300 transition hover:-translate-y-0.5 hover:bg-brand-500 hover:text-slate-950"
+                  className="cursor-default rounded-lg border border-brand-500/30 bg-brand-500/10 px-3 py-1 font-mono text-sm text-brand-700 transition hover:-translate-y-0.5 hover:bg-brand-500 hover:text-white dark:text-brand-300 dark:hover:text-slate-950"
                 >
                   {skill}
                 </li>
