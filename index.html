@@ -33,12 +33,19 @@
                 <span class="status-badge">Відкритий до стажування</span>
             </div>
 
-            <nav class="main-nav" aria-label="Навігація по резюме">
-                <a href="#about">Про мене</a>
-                <a href="#education">Освіта</a>
-                <a href="#skills">Навички</a>
-                <a href="#projects">Проєкти</a>
-            </nav>
+            <div class="header-actions">
+                <nav class="main-nav" aria-label="Навігація по резюме">
+                    <a href="#about">Про мене</a>
+                    <a href="#education">Освіта</a>
+                    <a href="#skills">Навички</a>
+                    <a href="#projects">Проєкти</a>
+                    <a href="#reviews">Відгуки</a>
+                </nav>
+                <div class="header-buttons">
+                    <button type="button" id="theme-toggle" class="btn btn--ghost" aria-pressed="false">🌙 Нічна тема</button>
+                    <button type="button" id="open-feedback" class="btn btn--light">✉ Зворотний зв'язок</button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -85,13 +92,57 @@
                 <li class="project"><strong>Розробка БД:</strong> Проєктування нормалізованої бази даних (5 таблиць BCNF) для інформаційної системи.</li>
             </ul>
         </section>
+
+        <!-- ЛР4, завдання 2: коментарі з JSONPlaceholder (варіант 23) -->
+        <section id="reviews" class="card card--wide">
+            <h2>Відгуки попередніх роботодавців</h2>
+            <p class="section-note">Дані завантажуються з <code>jsonplaceholder.typicode.com/posts/23/comments</code> (варіант 23).</p>
+            <div id="reviews-list" class="reviews-list" aria-live="polite">
+                <p class="status-text">Завантаження відгуків…</p>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <!-- Спосіб 1: вбудований (inline) CSS -->
         <p style="letter-spacing: 0.5px; opacity: 0.85;">&copy; 2026 Фірко Андрій. Всі права захищені.</p>
+
+        <!-- ЛР4, завдання 1: вміст localStorage -->
+        <div class="storage-info">
+            <h3>Дані з localStorage (ОС та браузер)</h3>
+            <dl id="storage-list" class="storage-list"></dl>
+        </div>
+
         <a href="#top" class="to-top">↑ Нагору</a>
     </footer>
 
+    <!-- ЛР4, завдання 3: модальне вікно зворотного зв'язку (з'являється через 1 хвилину) -->
+    <div id="feedback-modal" class="modal" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+            <button type="button" class="modal__close" data-close-modal aria-label="Закрити">&times;</button>
+            <h2 id="feedback-title">Зворотний зв'язок</h2>
+            <p class="section-note">Залиште повідомлення — лист надійде мені на пошту.</p>
+
+            <form id="feedback-form" class="feedback-form" action="https://formspree.io/f/xzeekkqj" method="POST">
+                <label>Ім'я
+                    <input type="text" name="name" required minlength="2" autocomplete="name">
+                </label>
+                <label>Email
+                    <input type="email" name="email" required autocomplete="email">
+                </label>
+                <label>Номер телефону
+                    <input type="tel" name="phone" required pattern="\+?[0-9\s\-\(\)]{10,18}" placeholder="+380 XX XXX XX XX" autocomplete="tel">
+                </label>
+                <label>Повідомлення
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <button type="submit" class="btn btn--primary">Надіслати</button>
+                <p id="form-status" class="form-status" role="status"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

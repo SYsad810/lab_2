@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
+/* Варіант dark: спрацьовує, коли на <body> (або предку) є клас .dark,
+   а не за системним налаштуванням prefers-color-scheme */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Власні дизайн-токени Tailwind v4: стають класами bg-brand-*, text-brand-*, font-display */
 @theme {
   --color-brand-300: #67e8f9;
   --color-brand-400: #22d3ee;
   --color-brand-500: #06b6d4;
   --color-brand-600: #0891b2;
+  --color-brand-700: #0e7490;
   --font-display: "Segoe UI", "Inter", system-ui, sans-serif;
 }
