@@ -27,9 +27,9 @@ function Header({ theme, onToggleTheme }) {
             href="https://github.com/SYsad810/lab_2"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 ml-2 inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-black"
+            className="mt-4 ml-2 inline-flex items-center gap-2 rounded-full border border-white/60 bg-green-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-800"
           >
-            🚀 Live на Vercel · ЛР5
+            ✅ Автоматично розгорнуто з GitHub
           </a>
         </div>
 

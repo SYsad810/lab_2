@@ -562,7 +562,7 @@ code {
     padding: 4px 12px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 999px;
-    background-color: #0f172a;
+    background-color: #15803d;
     color: #ffffff;
     font-size: 0.85rem;
     font-weight: 600;
@@ -571,7 +571,7 @@ code {
 }
 
 .deploy-badge:hover {
-    background-color: #000000;
+    background-color: #166534;
 }
 
 /* Нічна тема: перевизначаємо змінні — решта стилів підхоплює їх автоматично */
