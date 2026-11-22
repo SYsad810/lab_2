@@ -22,6 +22,15 @@ function Header({ theme, onToggleTheme }) {
           >
             ✉ firko.andriy60@gmail.com
           </a>
+          {/* ЛР5: зміна для перевірки автоматичного розгортання на Vercel */}
+          <a
+            href="https://github.com/SYsad810/lab_2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 ml-2 inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-black"
+          >
+            🚀 Live на Vercel · ЛР5
+          </a>
         </div>
 
         {/* Ручний перемикач теми */}

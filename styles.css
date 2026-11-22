@@ -555,6 +555,25 @@ code {
     color: #dc2626;
 }
 
+/* ЛР5: бейдж розгортання на Vercel */
+.deploy-badge {
+    display: inline-block;
+    margin: 12px 0 0 8px;
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.deploy-badge:hover {
+    background-color: #000000;
+}
+
 /* Нічна тема: перевизначаємо змінні — решта стилів підхоплює їх автоматично */
 body.dark-mode {
     --color-bg: #0b1120;
